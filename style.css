@@ -1,3 +1,5 @@
+/* style.css (COMPLETO) */
+
 /* ===== Reset ===== */
 *{
   margin:0;
@@ -9,22 +11,9 @@
   --bg:#0b0f18;
   --paper:#f3f3f3;
   --blue:#365cff;
-
-  /* escala geral */
-  --page-max: 900px;
-
-  /* header */
-  --header-tilt: -2deg;
-  --header-pad-y: clamp(14px, 2.2vw, 22px);
-  --header-pad-x: clamp(16px, 3vw, 34px);
-
-  /* foto/qr */
-  --photo-w: clamp(86px, 10vw, 110px);
-  --photo-h: clamp(110px, 12.5vw, 140px);
-  --qr-size: clamp(64px, 7.5vw, 90px);
-
-  /* respiro para o conteúdo não “entrar” no header */
-  --content-top: clamp(120px, 16vw, 165px);
+  --hover:#9bb4ff; /* azul claro hover */
+  --text:#111;
+  --muted:#444;
 }
 
 /* ===== Base ===== */
@@ -33,166 +22,264 @@ body{
   font-family:"IBM Plex Mono", Arial, Helvetica, sans-serif;
   display:flex;
   justify-content:center;
-  padding:clamp(18px, 5vw, 60px) 20px;
+  padding:60px 20px;
 }
 
 /* ===== Página ===== */
 .page{
   background:var(--paper);
   width:100%;
-  max-width:var(--page-max);
+  max-width:900px;
   position:relative;
-
-  /* padding top calculado para caber o header flutuante */
-  padding: calc(var(--content-top) + 24px) clamp(18px, 4.5vw, 60px) 60px;
-
   box-shadow:0 30px 80px rgba(0,0,0,0.5);
-  border-radius: 10px;
-  overflow:hidden; /* evita “estourar” */
+  border-radius:12px;
+  overflow:hidden;
 }
 
 /* ===== Clip ===== */
 .clip{
   position:absolute;
-  top: clamp(-32px, -3.8vw, -18px);
-  left: clamp(14px, 3vw, 28px);
-  z-index:20;
+  top:-18px;
+  left:30px;
+  z-index:5;
 }
 
 .clip img{
-  width: clamp(26px, 3.2vw, 40px);
+  width:32px;
   height:auto;
 }
 
-/* ===== Header flutuante ===== */
+/* ============================= */
+/* 🔵 HEADER (parte azul) */
+/* ============================= */
 .header-card{
-  position:absolute;
-  top: clamp(-54px, -6vw, -32px);
-  left:50%;
-  transform:translateX(-50%) rotate(var(--header-tilt));
-
-  width: min(92%, 860px);
   background:var(--blue);
   color:#fff;
-
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap: clamp(12px, 2vw, 22px);
-
-  padding: var(--header-pad-y) var(--header-pad-x);
-  z-index:10;
-
-  border-radius: 12px;
-  box-shadow:0 18px 40px rgba(0,0,0,0.28);
+  padding:40px 50px;
+  gap:30px;
 }
 
-/* foto */
+/* Foto */
 .profile-photo{
-  width:var(--photo-w);
-  height:var(--photo-h);
+  width:110px;
+  height:140px;
   background:#fff;
-  padding: clamp(4px, .7vw, 6px);
-  transform: rotate(2deg);
-  border-radius: 10px;
+  padding:6px;
+  border-radius:10px;
   overflow:hidden;
-  flex:0 0 auto;
+  flex-shrink:0;
 }
 
 .profile-photo img{
   width:100%;
   height:100%;
   object-fit:cover;
-  border-radius: 8px;
+  border-radius:8px;
 }
 
-/* info */
+/* Info */
 .header-info{
   flex:1;
-  min-width: 0; /* evita quebrar layout */
+  min-width:0;
 }
 
 .header-info h1{
-  font-size: clamp(18px, 2.4vw, 26px);
-  line-height:1.15;
+  font-size:26px;
   margin-bottom:6px;
-  letter-spacing:-0.2px;
+  line-height:1.15;
 }
 
 .header-info p{
-  font-size: clamp(12px, 1.35vw, 14px);
-  opacity:0.95;
+  font-size:14px;
+  opacity:.95;
 }
 
-/* contatos */
+/* Contatos */
 .contact-links{
-  margin-top:10px;
+  margin-top:14px;
   display:flex;
   flex-wrap:wrap;
-  gap: 10px 14px;
-  font-size: clamp(11px, 1.25vw, 13px);
+  gap:14px;
+  font-size:13px;
 }
 
-.contact-links a,
-.contact-links span{
-  color:#fff;
+/* 🔵 LINKS DO HEADER */
+.header-card a{
+  color:#ffffff;
   text-decoration:none;
-  opacity:0.95;
-  white-space:nowrap;
+  transition:color .2s ease;
 }
 
-.contact-links a:hover{
-  text-decoration:underline;
-  opacity:1;
+.header-card a:hover{
+  color:var(--hover);
 }
 
 /* QR */
-.qr-code{
-  flex:0 0 auto;
-}
-
 .qr-code img{
-  width:var(--qr-size);
+  width:90px;
   height:auto;
-  border-radius: 10px;
-  background:rgba(255,255,255,0.10);
-  padding: 6px;
+  border-radius:8px;
+  background:rgba(255,255,255,0.1);
+  padding:6px;
 }
 
-/* ===== Conteúdo ===== */
+/* ============================= */
+/* 📄 BODY (resto da página) */
+/* ============================= */
 .content{
-  margin-top: 0; /* padding-top da .page já resolve */
+  padding:60px 50px;
+  color:var(--text);
 }
 
+.block{
+  margin-bottom:34px;
+}
+
+.para{
+  margin-top:14px;
+  line-height:1.65;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.rule{
+  height:1px;
+  background:rgba(0,0,0,0.12);
+  margin:30px 0;
+}
+
+/* títulos */
 .content h2{
   text-align:center;
-  margin-bottom:20px;
+  margin-bottom:22px;
   letter-spacing:2px;
-  font-size: clamp(14px, 1.7vw, 18px);
+  font-size:16px;
 }
 
-/* skills */
+/* colunas */
+.cols{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:30px;
+  margin-top:26px;
+}
+
+.cols h3{
+  font-size:14px;
+  margin-bottom:10px;
+  color:#222;
+}
+
+.cols ul{
+  list-style:disc;
+  padding-left:18px;
+  display:grid;
+  gap:8px;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.5;
+}
+
+/* entries */
+.entry{
+  padding:14px 0;
+}
+
+.entry-head{
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  align-items:baseline;
+}
+
+.entry-title{
+  font-weight:600;
+  color:#222;
+  font-size:14px;
+}
+
+.entry-date{
+  color:#666;
+  font-size:12px;
+}
+
+.entry-sub{
+  margin-top:6px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* experiência */
+.exp{
+  padding:16px 0;
+}
+
+.exp-head{
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  align-items:baseline;
+}
+
+.exp-org{
+  font-weight:600;
+  color:#222;
+  font-size:14px;
+}
+
+.exp-date{
+  color:#666;
+  font-size:12px;
+}
+
+.exp-role{
+  margin-top:6px;
+  color:#222;
+  font-size:13px;
+  font-weight:500;
+}
+
+.bullets{
+  margin-top:10px;
+  padding-left:18px;
+  display:grid;
+  gap:8px;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.5;
+}
+
+/* 📄 LINKS DO BODY */
+.content a{
+  color:inherit;
+  text-decoration:none;
+  transition:color .2s ease;
+}
+
+.content a:hover{
+  color:var(--hover);
+}
+
+/* Skills */
 .skills-grid{
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
-  align-items:center;
-  gap:clamp(16px, 3vw, 30px);
-  width:100%;
+  gap:28px;
+  margin-top:10px;
 }
 
 .skill-item{
-  background:transparent;
-  border:none;
-  padding:0;
   display:flex;
   align-items:center;
   justify-content:center;
-  flex:0 0 auto;
 }
 
 .skill-item img{
-  width:clamp(32px, 5vw, 46px);
+  width:44px;
   height:auto;
   filter:drop-shadow(0 6px 10px rgba(0,0,0,0.25));
   transition:transform .2s ease, filter .2s ease;
@@ -203,29 +290,65 @@ body{
   filter:drop-shadow(0 10px 18px rgba(0,0,0,0.35));
 }
 
-/* ===== Mobile ===== */
+/* footer */
+.footer-call{
+  margin-top:10px;
+  text-align:center;
+}
+
+.footer-stars{
+  color:#999;
+  font-size:12px;
+  letter-spacing:1px;
+}
+
+.footer-cta{
+  margin:10px 0 8px;
+  font-weight:700;
+  font-size:13px;
+  color:#222;
+  letter-spacing:1px;
+}
+
+.footer-links{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+  color:var(--muted);
+  font-size:13px;
+  margin-bottom:10px;
+}
+
+.footer-links span{
+  opacity:.6;
+}
+
+/* ============================= */
+/* 📱 Responsivo */
+/* ============================= */
 @media(max-width:768px){
-  :root{
-    --header-tilt: 0deg;
-    --content-top: 190px; /* dá espaço pro header em coluna */
+
+  body{
+    padding:30px 16px;
   }
 
   .header-card{
     flex-direction:column;
     text-align:center;
-    align-items:center;
+    padding:28px 22px;
+    gap:18px;
   }
 
-  .profile-photo{
-    transform:none;
+  .content{
+    padding:40px 22px;
   }
 
-  .contact-links{
-    justify-content:center;
+  .cols{
+    grid-template-columns:1fr;
   }
 
-  .page{
-    padding: calc(var(--content-top) + 20px) 18px 40px;
-    border-radius: 10px;
+  .qr-code img{
+    width:84px;
   }
 }
