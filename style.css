@@ -1,11 +1,7 @@
 /* ============================= */
 /* RESET */
 /* ============================= */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+*{ margin:0; padding:0; box-sizing:border-box; }
 
 :root{
   --bg:#0b0f18;
@@ -14,6 +10,11 @@
   --muted:#4a5167;
   --blue:#365cff;
   --hover:#9bb4ff;
+
+  /* BOX INVISÍVEL DO HEADER */
+  --header-h: 190px;     /* altura média do header */
+  --header-top: 90px;    /* quanto ele “sobe” */
+  --safe-top: calc(var(--header-h) - var(--header-top) + 70px);
 }
 
 /* ============================= */
@@ -32,21 +33,29 @@ body{
 /* PAPEL (SEM ARREDONDAR) */
 /* ============================= */
 .page{
-  background:var(--paper);
   width:100%;
   max-width:900px;
   position:relative;
 
-  /* espaço para o header flutuante */
-  padding:140px 60px 60px;
+  /* papel */
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.35), rgba(255,255,255,0) 160px),
+    radial-gradient(900px 420px at 30% 18%, rgba(0,0,0,.06), transparent 55%),
+    radial-gradient(700px 360px at 85% 55%, rgba(0,0,0,.04), transparent 60%),
+    var(--paper);
+
+  /* BOX INVISÍVEL: cria espaço pra header sem cortar */
+  padding: calc(var(--safe-top) + 40px) 60px 60px;
 
   box-shadow:0 30px 80px rgba(0,0,0,0.5);
   border-radius:0;
-  overflow:hidden;
+
+  /* IMPORTANTE: não cortar o header */
+  overflow:visible;
 }
 
 /* ============================= */
-/* CLIP CENTRAL (SVG DECORATIVO) */
+/* CLIP CENTRAL */
 /* ============================= */
 .clip{
   position:absolute;
@@ -55,10 +64,10 @@ body{
   transform:translateX(-50%);
   z-index:10;
 }
-
 .clip img{
   width:40px;
   height:auto;
+  filter:drop-shadow(0 10px 16px rgba(0,0,0,.25));
 }
 
 /* ============================= */
@@ -66,7 +75,7 @@ body{
 /* ============================= */
 .header-card{
   position:absolute;
-  top:-80px;
+  top: calc(-1 * var(--header-top));
   left:50%;
   transform:translateX(-50%) rotate(-2deg);
   width:92%;
@@ -80,12 +89,11 @@ body{
   gap:30px;
 
   padding:30px 40px;
-  border-radius:0;
   box-shadow:0 18px 40px rgba(0,0,0,.30);
   z-index:5;
 }
 
-/* Foto (com leve rotação) */
+/* Foto */
 .profile-photo{
   width:110px;
   height:140px;
@@ -94,7 +102,6 @@ body{
   transform:rotate(3deg);
   flex:0 0 auto;
 }
-
 .profile-photo img{
   width:100%;
   height:100%;
@@ -103,23 +110,20 @@ body{
 }
 
 /* Info */
-.header-info{
-  flex:1;
-  min-width:0;
-}
-
+.header-info{ flex:1; min-width:0; }
 .header-info h1{
   font-size:26px;
+  font-weight:700;
   margin-bottom:8px;
   line-height:1.1;
 }
-
 .header-info p{
   font-size:14px;
+  font-weight:500;
   opacity:.95;
 }
 
-/* Links (HEADER: branco -> hover azul claro) */
+/* Links header */
 .contact-links{
   margin-top:10px;
   display:flex;
@@ -127,16 +131,12 @@ body{
   gap:18px;
   font-size:13px;
 }
-
 .header-card a{
   color:#fff;
   text-decoration:none;
   transition:color .18s ease;
 }
-
-.header-card a:hover{
-  color:var(--hover);
-}
+.header-card a:hover{ color:var(--hover); }
 
 /* QR */
 .qr-code img{
@@ -148,31 +148,49 @@ body{
 }
 
 /* ============================= */
-/* BODY */
+/* BODY: HIERARQUIA + SEPARAÇÃO */
 /* ============================= */
 .content{
-  margin-top:60px;
+  margin-top:0; /* agora o padding-top da page resolve */
   color:var(--ink);
 }
 
-/* Titulação estilo original */
+/* títulos (variação de peso e tracking) */
 .content h2{
   text-align:center;
-  margin-bottom:20px;
-  letter-spacing:2px;
-  font-size:16px;
+  margin:18px 0 18px;
+  letter-spacing:3px;
+  font-size:14px;
+  font-weight:700;
 }
 
-/* Links (BODY: cor do texto -> hover azul claro) */
+/* parágrafos com respiro e legibilidade */
+.content p,
+.content li{
+  font-size:13px;
+  line-height:1.65;
+  color:var(--muted);
+}
+
+/* separador pontilhado estilo “print” (se você usar .rule) */
+.rule.dotted{
+  height:1px;
+  margin:28px 0;
+  background:repeating-linear-gradient(
+    90deg,
+    rgba(20,24,38,.45) 0 6px,
+    transparent 6px 14px
+  );
+  opacity:.55;
+}
+
+/* links body */
 .content a{
   color:inherit;
   text-decoration:none;
   transition:color .18s ease;
 }
-
-.content a:hover{
-  color:var(--hover);
-}
+.content a:hover{ color:var(--hover); }
 
 /* ============================= */
 /* SKILLS (VETORES PROPORCIONAIS) */
@@ -184,27 +202,23 @@ body{
   align-items:center;
   gap:clamp(18px,3vw,34px);
   width:100%;
+  margin-top:22px;
 }
-
 .skill-item{
   width:60px;
   height:60px;
   display:flex;
   align-items:center;
   justify-content:center;
-  flex:0 0 auto;
 }
-
 .skill-item img{
   width:44px;
-  height:44px;           /* força proporção consistente */
-  object-fit:contain;    /* evita distorção em SVG */
+  height:44px;
+  object-fit:contain;
   display:block;
-
   filter:drop-shadow(0 6px 10px rgba(0,0,0,0.25));
   transition:transform .25s ease, filter .25s ease;
 }
-
 .skill-item:hover img{
   transform:translateY(-6px);
   filter:drop-shadow(0 10px 18px rgba(0,0,0,0.35));
@@ -214,22 +228,23 @@ body{
 /* RESPONSIVO */
 /* ============================= */
 @media(max-width:768px){
+  :root{
+    --header-h: 260px;
+    --header-top: 40px;
+    --safe-top: calc(var(--header-h) - var(--header-top) + 70px);
+  }
+
   .page{
-    padding:180px 25px 40px;
+    padding: calc(var(--safe-top) + 30px) 25px 40px;
   }
 
   .header-card{
-    transform:translateX(-50%); /* tira rotação no mobile */
+    transform:translateX(-50%);
     flex-direction:column;
     text-align:center;
     gap:15px;
   }
 
-  .profile-photo{
-    transform:none;
-  }
-
-  .qr-code img{
-    width:84px;
-  }
+  .profile-photo{ transform:none; }
+  .qr-code img{ width:84px; }
 }
