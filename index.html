@@ -3,45 +3,52 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Currículo — Lorenzo Mitestainer Guirelli</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
   <main class="stage">
-    <section class="paper" aria-label="Currículo">
-      <img class="clip" src="./assets/svg/clips.svg" alt="" aria-hidden="true" />
+    <article class="paper" aria-label="Currículo">
+
+      <img class="clip" src="./assets/svg/clips.svg" alt="" aria-hidden="true">
 
       <header class="card" id="topo">
         <div class="card-inner">
-          <div class="card-photo">
-            <img id="profilePhoto" src="./assets/img/profile/1.jpg" alt="Foto de perfil" />
-          </div>
+          <div class="card-grid">
+            <div class="card-main">
+              <h1 class="name">Lorenzo Mitestainer Guirelli</h1>
+              <p class="headline">Marketing Digital · Produção de Conteúdo · Automação e Inteligência Artificial</p>
 
-          <div class="card-info">
-            <h1 class="name">Lorenzo Mitestainer Guirelli</h1>
-            <p class="headline">Marketing Digital · Produção de Conteúdo · Automação e Inteligência Artificial</p>
-
-            <div class="card-meta">
-              <a class="chip" href="tel:+5519997791295">(19) 99779-1295</a>
-              <a class="chip" href="mailto:guirellilorenzo1@gmail.com">guirellilorenzo1@gmail.com</a>
-              <a class="chip" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+              <div class="pills">
+                <a class="pill" href="tel:+5519997791295">(19) 99779-1295</a>
+                <a class="pill" href="mailto:guirellilorenzo1@gmail.com">guirellilorenzo1@gmail.com</a>
+                <a class="pill" href="https://www.linkedin.com/in/lorenzo-mitestainer-guirelli-9b455916b/" target="_blank" rel="noopener">LinkedIn</a>
+              </div>
             </div>
-          </div>
 
-          <div class="card-qr">
-            <div class="qr-frame">
-              <img src="./assets/img/qr/linkedin.png" alt="QR code do LinkedIn" />
+            <div class="card-qr">
+              <div class="qr-frame">
+                <img src="./assets/img/qr-linkedin.png" alt="QR code do LinkedIn">
+              </div>
+              <div class="qr-label">QR CODE DO LINKEDIN</div>
             </div>
-            <div class="qr-label">QR Code do LinkedIn</div>
           </div>
         </div>
       </header>
 
-      <div class="content">
+      <div class="photo-3x4" aria-label="Foto 3x4">
+        <img id="profilePhoto" src="./assets/img/profile/1.jpg" alt="Foto de perfil">
+        <span class="photo-caption" aria-hidden="true">FOTO 3x4</span>
+      </div>
+
+      <section class="content" id="conteudo">
+
         <section class="block" id="resumo">
           <div class="title-row">
             <span class="circle js-circle" aria-hidden="true"></span>
@@ -49,13 +56,18 @@
           </div>
 
           <p class="para">
-            Profissional com formação em Produção Multimídia e Bacharelado Interdisciplinar em Ciência e Economia, com atuação em marketing digital, produção de conteúdo e planejamento estratégico para redes sociais. Experiência na criação de conteúdo visual, edição de vídeos, design gráfico e organização de calendários editoriais.
+            Profissional com formação em Produção Multimídia e Bacharelado Interdisciplinar em Ciência e Economia, com atuação em marketing digital,
+            produção de conteúdo e planejamento estratégico para redes sociais. Experiência na criação de conteúdo visual, edição de vídeos, design gráfico
+            e organização de calendários editoriais.
           </p>
           <p class="para">
-            Forte interesse e estudo independente em programação, automação de processos e inteligência artificial, com aplicação prática em marketing digital, atendimento e otimização de fluxos operacionais. Desenvolve projetos próprios envolvendo automações, integração de ferramentas, uso de APIs, lógica de programação e agentes de IA, com foco em eficiência, escala e redução de tarefas manuais.
+            Forte interesse e estudo independente em programação, automação de processos e inteligência artificial, com aplicação prática em marketing digital,
+            atendimento e otimização de fluxos operacionais. Desenvolve projetos próprios envolvendo automações, integração de ferramentas, uso de APIs,
+            lógica de programação e agentes de IA, com foco em eficiência, escala e redução de tarefas manuais.
           </p>
           <p class="para">
-            Perfil analítico, organizado e orientado a resultados, com foco em inovação, eficiência operacional, melhoria contínua e aprendizado constante, integrando criatividade, tecnologia e estratégia para gerar resultados mensuráveis em ambientes digitais.
+            Perfil analítico, organizado e orientado a resultados, com foco em inovação, eficiência operacional, melhoria contínua e aprendizado constante,
+            integrando criatividade, tecnologia e estratégia para gerar resultados mensuráveis em ambientes digitais.
           </p>
         </section>
 
@@ -86,7 +98,7 @@
           <div class="rule dotted"></div>
 
           <div class="cols">
-            <div>
+            <div class="col">
               <h3 class="micro-title">Cursos</h3>
               <ul class="micro-list">
                 <li>Marketing Digital · EBAC</li>
@@ -102,7 +114,7 @@
               </ul>
             </div>
 
-            <div>
+            <div class="col">
               <h3 class="micro-title">Ferramentas</h3>
               <ul class="micro-list">
                 <li>Photoshop · Avançado</li>
@@ -214,19 +226,20 @@
             <h2 class="section-title">Habilidades e Competências</h2>
           </div>
 
-          <div class="skills">
+          <div class="skills" aria-label="Ícones de habilidades">
             <div class="skill"><img src="./assets/svg/skills/photoshop.svg" alt="Photoshop"></div>
             <div class="skill"><img src="./assets/svg/skills/illustrator.svg" alt="Illustrator"></div>
             <div class="skill"><img src="./assets/svg/skills/premiere.svg" alt="Premiere Pro"></div>
             <div class="skill"><img src="./assets/svg/skills/after-effects.svg" alt="After Effects"></div>
             <div class="skill"><img src="./assets/svg/skills/blender.svg" alt="Blender"></div>
-            <div class="skill"><img src="./assets/svg/skills/chatgpt.svg" alt="ChatGPT"></div>
-            <div class="skill"><img src="./assets/svg/skills/audition.svg" alt="Audition"></div>
             <div class="skill"><img src="./assets/svg/skills/media-encoder.svg" alt="Media Encoder"></div>
+            <div class="skill"><img src="./assets/svg/skills/audition.svg" alt="Audition"></div>
+            <div class="skill"><img src="./assets/svg/skills/chatgpt.svg" alt="ChatGPT"></div>
           </div>
 
           <p class="para small">
-            Marketing Digital, Produção de Conteúdo, Gestão de Redes Sociais, Planejamento Estratégico, Automação de Processos, Inteligência Artificial aplicada ao Marketing, Lógica de programação (iniciante), Integração de Ferramentas e APIs, Análise de Dados, Otimização de Processos.
+            Marketing Digital, Produção de Conteúdo, Gestão de Redes Sociais, Planejamento Estratégico, Automação de Processos, Inteligência Artificial aplicada ao Marketing,
+            Lógica de programação (iniciante), Integração de Ferramentas e APIs, Análise de Dados, Otimização de Processos.
           </p>
         </section>
 
@@ -240,12 +253,13 @@
             <span>·</span>
             <a href="tel:+5519997791295">(19) 99779-1295</a>
             <span>·</span>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/lorenzo-mitestainer-guirelli-9b455916b/" target="_blank" rel="noopener">LinkedIn</a>
           </div>
           <div class="footer-stars">**************************************</div>
         </footer>
-      </div>
-    </section>
+
+      </section>
+    </article>
   </main>
 
   <script src="./script.js"></script>
