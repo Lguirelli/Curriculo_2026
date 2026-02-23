@@ -254,16 +254,29 @@ body{
   color: rgba(20,24,34,.88);
 }
 
+/* Circle overlay ON TOP of title */
+.title-row{
+  position: relative;
+  display: inline-block;
+}
+
+.section-title{
+  position: relative;
+  z-index: 2;
+}
+
 .circle{
-  width: 170px;
-  height: 44px;
-  display:inline-block;
+  position: absolute;
+  left: -10px;
+  top: -8px;
+  width: 190px;
+  height: 55px;
+  z-index: 1;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
-  transform: rotate(-1.5deg);
-  opacity: .98;
-  filter: drop-shadow(0 1px 0 rgba(0,0,0,.08));
+  transform: rotate(-2deg);
+  opacity: 1;
 }
 
 /* Variações (SVGs em /assets) */
