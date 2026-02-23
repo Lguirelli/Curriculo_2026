@@ -12,6 +12,7 @@
 *{box-sizing:border-box}
 
 body{
+  font-family: 'IBM Plex Mono', monospace;
   margin:0;
   background: radial-gradient(900px 600px at 70% 10%, rgba(47,86,255,.20), transparent 55%),
               radial-gradient(800px 500px at 20% 0%, rgba(47,86,255,.10), transparent 60%),
@@ -254,22 +255,21 @@ body{
 }
 
 .circle{
-  width: 120px;
-  height: 28px;
-  border: 3px solid rgba(47,86,255,.85);
-  border-radius: 999px;
-  transform: rotate(-2deg);
-  opacity: .9;
-  position: relative;
+  width: 140px;
+  height: 34px;
+  display:inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transform: rotate(-1.5deg);
+  opacity: .95;
+  filter: drop-shadow(0 1px 0 rgba(0,0,0,.08));
 }
-.circle::after{
-  content:"";
-  position:absolute;
-  inset: 6px 18px;
-  border-bottom: 2px solid rgba(47,86,255,.55);
-  border-radius: 999px;
-  opacity: .6;
-}
+
+/* Variações (SVGs em /assets) */
+.circle.c1{ background-image: url("assets/svg/circles/circulo.svg"); }
+.circle.c2{ background-image: url("assets/svg/circles/circulo2.svg"); }
+.circle.c3{ background-image: url("assets/svg/circles/circulo1.svg"); }
 
 /* entries */
 .entry{
@@ -333,26 +333,6 @@ body{
   border-bottom: 1px dotted rgba(0,0,0,.18);
 }
 .exp:last-child{ border-bottom: none; }
-
-.exp-mark{
-  width: 12px;
-  height: 12px;
-  margin-top: 6px;
-  background: rgba(47,86,255,.90);
-  border-radius: 4px;
-  position: relative;
-}
-.exp-mark::after{
-  content:"";
-  position:absolute;
-  left: -8px;
-  top: 3px;
-  width: 8px;
-  height: 3px;
-  background: rgba(47,86,255,.90);
-  border-radius: 999px;
-  transform: rotate(-8deg);
-}
 
 .exp-head{
   display:flex;
@@ -471,4 +451,45 @@ body{
   .para{ font-size: 13px; }
   .entry-title, .exp-org{ font-size: 13px; }
   .paper-clip{ left: 14px; }
+}
+
+
+/* Ícones SVG aleatórios na EXPERIÊNCIA */
+.pen-exp{
+  width: 22px;
+  height: 18px;
+  margin-top: 4px;
+  display:inline-block;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+  filter: drop-shadow(0 1px 0 rgba(0,0,0,.10));
+  opacity: .95;
+}
+
+
+/* Tipografia estilo máquina de escrever com pesos variados */
+
+.name{
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.section-title{
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.entry-title,
+.exp-org{
+  font-weight: 600;
+}
+
+.exp-role{
+  font-weight: 500;
+}
+
+.para{
+  font-weight: 400;
 }
