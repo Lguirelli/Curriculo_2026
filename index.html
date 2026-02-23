@@ -134,7 +134,7 @@
           </div>
 
           <div class="exp">
-            <span class="pen-exp" data-role="expicon" aria-hidden="true"></span>
+            <span class="pen-exp" aria-hidden="true"></span>
             <div class="exp-body">
               <div class="exp-head">
                 <div class="exp-org">Grupo Farma</div>
@@ -151,7 +151,7 @@
           </div>
 
           <div class="exp">
-            <span class="pen-exp" data-role="expicon" aria-hidden="true"></span>
+            <span class="pen-exp" aria-hidden="true"></span>
             <div class="exp-body">
               <div class="exp-head">
                 <div class="exp-org">Raça Marketing e Comunicação</div>
@@ -167,7 +167,7 @@
           </div>
 
           <div class="exp">
-            <span class="pen-exp" data-role="expicon" aria-hidden="true"></span>
+            <span class="pen-exp" aria-hidden="true"></span>
             <div class="exp-body">
               <div class="exp-head">
                 <div class="exp-org">Aplicari</div>
@@ -183,7 +183,7 @@
           </div>
 
           <div class="exp">
-            <span class="pen-exp" data-role="expicon" aria-hidden="true"></span>
+            <span class="pen-exp" aria-hidden="true"></span>
             <div class="exp-body">
               <div class="exp-head">
                 <div class="exp-org">Liga de Mercado Financeiro (UNIFAL)</div>
@@ -199,7 +199,7 @@
           </div>
 
           <div class="exp">
-            <span class="pen-exp" data-role="expicon" aria-hidden="true"></span>
+            <span class="pen-exp" aria-hidden="true"></span>
             <div class="exp-body">
               <div class="exp-head">
                 <div class="exp-org">Associação Atlética Acadêmica Muquirana</div>
@@ -255,34 +255,6 @@
       </div>
     </section>
   </main>
-<script>
-  // Foto de perfil dinâmica (a cada refresh)
-  const profileImages = [
-    "assets/img/profile/p-01.jpg",
-    "assets/img/profile/p-02.jpg",
-    "assets/img/profile/p-03.jpg"
-  ];
-
-  const expIcons = [
-    "assets/svg/exp-icons/arrow.svg",
-    "assets/svg/exp-icons/arrow1.svg"
-  ];
-
-  function pickRandom(arr) {
-    return arr[Math.floor(Math.random() * arr.length)];
-  }
-
-  const profile = document.getElementById("profile-photo");
-  if (profile && profileImages.length) {
-    profile.src = pickRandom(profileImages);
-  }
-
-
-  // Ícones de experiência aleatórios (um por item)
-  document.querySelectorAll(\'[data-role="expicon"]\').forEach(el => {
-    if (!expIcons.length) return;
-    el.style.backgroundImage = `url("${pickRandom(expIcons)}")`;
-  });
-</script>
+  <script src="js/app.js"></script>
 </body>
 </html>

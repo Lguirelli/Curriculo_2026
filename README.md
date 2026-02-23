@@ -26,3 +26,7 @@ Settings -> Pages -> Source: main / (root)
 Se não refletir:
 - Ctrl + F5
 - ou renomeie o arquivo (cache)
+
+
+## JS
+- js/app.js -> lógica da foto de perfil dinâmica
