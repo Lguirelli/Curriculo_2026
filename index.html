@@ -1,267 +1,57 @@
-<!-- index.html -->
-<!doctype html>
-<html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Currículo — Lorenzo Mitestainer Guirelli</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="./styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lorenzo Mitestainer Guirelli</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <main class="stage">
-    <article class="paper" aria-label="Currículo">
 
-      <img class="clip" src="./assets/svg/clips.svg" alt="" aria-hidden="true">
+  <div class="page">
 
-      <header class="card" id="topo">
-        <div class="card-inner">
-          <div class="card-grid">
-            <div class="card-main">
-              <h1 class="name">Lorenzo Mitestainer Guirelli</h1>
-              <p class="headline">Marketing Digital · Produção de Conteúdo · Automação e Inteligência Artificial</p>
+    <div class="clip">
+      <img src="./assets/svg/clips.svg" alt="Clip">
+    </div>
 
-              <div class="pills">
-                <a class="pill" href="tel:+5519997791295">(19) 99779-1295</a>
-                <a class="pill" href="mailto:guirellilorenzo1@gmail.com">guirellilorenzo1@gmail.com</a>
-                <a class="pill" href="https://www.linkedin.com/in/lorenzo-mitestainer-guirelli-9b455916b/" target="_blank" rel="noopener">LinkedIn</a>
-              </div>
-            </div>
-
-            <div class="card-qr">
-              <div class="qr-frame">
-                <img src="./assets/img/qr-linkedin.png" alt="QR code do LinkedIn">
-              </div>
-              <div class="qr-label">QR CODE DO LINKEDIN</div>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <div class="photo-3x4" aria-label="Foto 3x4">
-        <img id="profilePhoto" src="./assets/img/profile/1.jpg" alt="Foto de perfil">
-        <span class="photo-caption" aria-hidden="true">FOTO 3x4</span>
+    <header class="header-card">
+      <div class="profile-photo">
+        <img src="./assets/img/profile/p-01.jpg" alt="Foto de Perfil">
       </div>
 
-      <section class="content" id="conteudo">
+      <div class="header-info">
+        <h1>Lorenzo Mitestainer Guirelli</h1>
+        <p>Marketing Digital · Produção de Conteúdo · Automação e Inteligência Artificial</p>
 
-        <section class="block" id="resumo">
-          <div class="title-row">
-            <span class="circle js-circle" aria-hidden="true"></span>
-            <h2 class="section-title">Resumo Profissional</h2>
-          </div>
+        <div class="contact-links">
+          <span>(19) 99779-1295</span>
+          <span>guirellilorenz01@gmail.com</span>
+          <span>LinkedIn</span>
+        </div>
+      </div>
 
-          <p class="para">
-            Profissional com formação em Produção Multimídia e Bacharelado Interdisciplinar em Ciência e Economia, com atuação em marketing digital,
-            produção de conteúdo e planejamento estratégico para redes sociais. Experiência na criação de conteúdo visual, edição de vídeos, design gráfico
-            e organização de calendários editoriais.
-          </p>
-          <p class="para">
-            Forte interesse e estudo independente em programação, automação de processos e inteligência artificial, com aplicação prática em marketing digital,
-            atendimento e otimização de fluxos operacionais. Desenvolve projetos próprios envolvendo automações, integração de ferramentas, uso de APIs,
-            lógica de programação e agentes de IA, com foco em eficiência, escala e redução de tarefas manuais.
-          </p>
-          <p class="para">
-            Perfil analítico, organizado e orientado a resultados, com foco em inovação, eficiência operacional, melhoria contínua e aprendizado constante,
-            integrando criatividade, tecnologia e estratégia para gerar resultados mensuráveis em ambientes digitais.
-          </p>
-        </section>
+      <div class="qr-code">
+        <img src="./assets/img/qr.png" alt="QR Code LinkedIn">
+      </div>
+    </header>
 
-        <div class="rule dotted"></div>
+    <section class="content">
+      <h2>HABILIDADES E COMPETÊNCIAS</h2>
 
-        <section class="block" id="formacao">
-          <div class="title-row">
-            <span class="circle js-circle" aria-hidden="true"></span>
-            <h2 class="section-title">Formação</h2>
-          </div>
+      <div class="skills-grid">
+        <div class="skill-item"><img src="./assets/svg/skills/photoshop.svg" alt="Photoshop"></div>
+        <div class="skill-item"><img src="./assets/svg/skills/illustrator.svg" alt="Illustrator"></div>
+        <div class="skill-item"><img src="./assets/svg/skills/premiere.svg" alt="Premiere"></div>
+        <div class="skill-item"><img src="./assets/svg/skills/after-effects.svg" alt="After Effects"></div>
+        <div class="skill-item"><img src="./assets/svg/skills/blender.svg" alt="Blender"></div>
+        <div class="skill-item"><img src="./assets/svg/skills/media-encoder.svg" alt="Media Encoder"></div>
+        <div class="skill-item"><img src="./assets/svg/skills/audition.svg" alt="Audition"></div>
+        <div class="skill-item"><img src="./assets/svg/skills/chatgpt.svg" alt="ChatGPT"></div>
+      </div>
 
-          <div class="entry">
-            <div class="entry-head">
-              <div class="entry-title">Produção Multimídia</div>
-              <div class="entry-date">2020 — 2023</div>
-            </div>
-            <div class="entry-sub">Centro Universitário do Sul de Minas (Grupo UNIS)</div>
-          </div>
+    </section>
 
-          <div class="entry">
-            <div class="entry-head">
-              <div class="entry-title">Bacharelado Interdisciplinar em Ciência e Economia</div>
-              <div class="entry-date">2017 — 2022</div>
-            </div>
-            <div class="entry-sub">Universidade Federal de Alfenas (UNIFAL)</div>
-          </div>
+  </div>
 
-          <div class="rule dotted"></div>
-
-          <div class="cols">
-            <div class="col">
-              <h3 class="micro-title">Cursos</h3>
-              <ul class="micro-list">
-                <li>Marketing Digital · EBAC</li>
-                <li>Trade Marketing Digital · ESPM</li>
-                <li>Método SPE (Sistema de Posicionamento Estratégico) · Luana Carolina</li>
-                <li>SketchUp para Maquetes e Modelagem 3D · BM Maquetes (em andamento)</li>
-              </ul>
-
-              <h3 class="micro-title mt">Idiomas</h3>
-              <ul class="micro-list">
-                <li>Português · Nativo</li>
-                <li>Inglês · Avançado</li>
-              </ul>
-            </div>
-
-            <div class="col">
-              <h3 class="micro-title">Ferramentas</h3>
-              <ul class="micro-list">
-                <li>Photoshop · Avançado</li>
-                <li>Illustrator · Intermediário</li>
-                <li>Premiere Pro · Avançado</li>
-                <li>After Effects · Intermediário</li>
-                <li>Blender · Intermediário</li>
-                <li>SketchUp · Intermediário</li>
-                <li>Pacote Office · Intermediário</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <div class="rule dotted"></div>
-
-        <section class="block" id="experiencia">
-          <div class="title-row">
-            <span class="circle js-circle" aria-hidden="true"></span>
-            <h2 class="section-title">Experiência</h2>
-          </div>
-
-          <div class="exp">
-            <span class="pen-exp js-expicon" aria-hidden="true"></span>
-            <div>
-              <div class="exp-head">
-                <div class="exp-org">Grupo Farma</div>
-                <div class="exp-date">Nov/2022 — Atual</div>
-              </div>
-              <div class="exp-role">Assistente de Marketing</div>
-              <ul class="bullets">
-                <li>Planejamento e desenvolvimento de calendário mensal de conteúdo para associados.</li>
-                <li>Criação de artes gráficas e materiais institucionais.</li>
-                <li>Edição de vídeos e imagens para comunicação interna e externa.</li>
-                <li>Apoio estratégico em campanhas de marketing digital e redes sociais.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="exp">
-            <span class="pen-exp js-expicon" aria-hidden="true"></span>
-            <div>
-              <div class="exp-head">
-                <div class="exp-org">Raça Marketing e Comunicação</div>
-                <div class="exp-date">Mai/2022 — Jun/2022</div>
-              </div>
-              <div class="exp-role">Freelancer · Marketing Digital</div>
-              <ul class="bullets">
-                <li>Gestão de tráfego pago e contas de anúncios.</li>
-                <li>Suporte na criação de campanhas digitais.</li>
-                <li>Edição de vídeos e conteúdos para mídias digitais.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="exp">
-            <span class="pen-exp js-expicon" aria-hidden="true"></span>
-            <div>
-              <div class="exp-head">
-                <div class="exp-org">Aplicari</div>
-                <div class="exp-date">2021 — 2022</div>
-              </div>
-              <div class="exp-role">Marketing Digital e Produção de Conteúdo</div>
-              <ul class="bullets">
-                <li>Gerenciamento de postagens e impulsionamentos.</li>
-                <li>Produção e edição de vídeos e imagens para redes sociais.</li>
-                <li>Desenvolvimento de estratégias de conteúdo e presença digital.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="exp">
-            <span class="pen-exp js-expicon" aria-hidden="true"></span>
-            <div>
-              <div class="exp-head">
-                <div class="exp-org">Liga de Mercado Financeiro (UNIFAL)</div>
-                <div class="exp-date">2019 — 2020</div>
-              </div>
-              <div class="exp-role">Diretor de Marketing</div>
-              <ul class="bullets">
-                <li>Desenvolvimento da identidade visual da liga.</li>
-                <li>Planejamento estratégico de marketing para eventos e projetos.</li>
-                <li>Gestão da comunicação digital e redes sociais.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="exp">
-            <span class="pen-exp js-expicon" aria-hidden="true"></span>
-            <div>
-              <div class="exp-head">
-                <div class="exp-org">Associação Atlética Acadêmica Muquirana</div>
-                <div class="exp-date">2018 — 2022</div>
-              </div>
-              <div class="exp-role">Equipe de Marketing</div>
-              <ul class="bullets">
-                <li>Criação de artes para redes sociais e materiais institucionais.</li>
-                <li>Divulgação de eventos e ações acadêmicas.</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <div class="rule dotted"></div>
-
-        <section class="block" id="habilidades">
-          <div class="title-row">
-            <span class="scribble" aria-hidden="true"></span>
-            <h2 class="section-title">Habilidades e Competências</h2>
-          </div>
-
-          <div class="skills" aria-label="Ícones de habilidades">
-            <div class="skill"><img src="./assets/svg/skills/photoshop.svg" alt="Photoshop"></div>
-            <div class="skill"><img src="./assets/svg/skills/illustrator.svg" alt="Illustrator"></div>
-            <div class="skill"><img src="./assets/svg/skills/premiere.svg" alt="Premiere Pro"></div>
-            <div class="skill"><img src="./assets/svg/skills/after-effects.svg" alt="After Effects"></div>
-            <div class="skill"><img src="./assets/svg/skills/blender.svg" alt="Blender"></div>
-            <div class="skill"><img src="./assets/svg/skills/media-encoder.svg" alt="Media Encoder"></div>
-            <div class="skill"><img src="./assets/svg/skills/audition.svg" alt="Audition"></div>
-            <div class="skill"><img src="./assets/svg/skills/chatgpt.svg" alt="ChatGPT"></div>
-          </div>
-
-          <p class="para small">
-            Marketing Digital, Produção de Conteúdo, Gestão de Redes Sociais, Planejamento Estratégico, Automação de Processos, Inteligência Artificial aplicada ao Marketing,
-            Lógica de programação (iniciante), Integração de Ferramentas e APIs, Análise de Dados, Otimização de Processos.
-          </p>
-        </section>
-
-        <div class="rule dotted"></div>
-
-        <footer class="footer-call" id="contato">
-          <div class="footer-stars">**************************************</div>
-          <div class="footer-cta">MEUS CONTATOS</div>
-          <div class="footer-links">
-            <a href="mailto:guirellilorenzo1@gmail.com">guirellilorenzo1@gmail.com</a>
-            <span>·</span>
-            <a href="tel:+5519997791295">(19) 99779-1295</a>
-            <span>·</span>
-            <a href="https://www.linkedin.com/in/lorenzo-mitestainer-guirelli-9b455916b/" target="_blank" rel="noopener">LinkedIn</a>
-          </div>
-          <div class="footer-stars">**************************************</div>
-        </footer>
-
-      </section>
-    </article>
-  </main>
-
-  <script src="./script.js"></script>
 </body>
 </html>
