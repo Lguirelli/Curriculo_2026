@@ -56,9 +56,10 @@ body{
 /* CLIP */
 .clip{
   position:absolute;
-  top:-64px;
-  left:-18px;
+  top:-40px;
+  left:-5px;
   width:34px;
+  transform:rotate(-10deg);
   height:auto;
   z-index:80;
   filter:drop-shadow(0 14px 18px rgba(0,0,0,.45));
