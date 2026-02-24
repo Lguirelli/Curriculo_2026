@@ -91,7 +91,7 @@ body{
 /* FOTO SAINDO PARA FORA */
 .card-photo{
   position:relative;
-  left:-28px;
+  left:--38px;
   z-index:70;
 
   width:118px;
