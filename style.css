@@ -228,9 +228,7 @@ body{
 }
 
 /* DIVISÃO INTERNA (FORMAÇÃO -> COMPLEMENTAR) */
-.formacao-academica{
-  margin-bottom:50px;
-}
+.formacao-academica{margin-bottom:50px}
 
 .divider-interno{
   height:1px;
@@ -239,9 +237,7 @@ body{
   opacity:.6;
 }
 
-.formacao-complementar{
-  padding-top:10px;
-}
+.formacao-complementar{padding-top:10px}
 
 .cols{
   display:grid;
@@ -265,9 +261,7 @@ body{
   padding-left:0;
 }
 
-.cols li{
-  margin-bottom:6px;
-}
+.cols li{margin-bottom:6px}
 
 .cols li::before{
   content:"•";
@@ -276,9 +270,7 @@ body{
 }
 
 /* EXPERIÊNCIA */
-.exp{
-  margin-bottom:56px;
-}
+.exp{margin-bottom:56px}
 
 .exp-head{
   display:flex;
@@ -316,23 +308,12 @@ body{
   color:var(--muted);
 }
 
-.bullets li{
-  margin-bottom:10px;
-}
+.bullets li{margin-bottom:10px}
 
 /* HABILIDADES */
-#habilidades{
-  text-align:center;
-}
-
-#habilidades .title-row{
-  justify-content:center;
-}
-
-#habilidades .para{
-  max-width:780px;
-  margin:0 auto;
-}
+#habilidades{text-align:center}
+#habilidades .title-row{justify-content:center}
+#habilidades .para{max-width:780px;margin:0 auto}
 
 .skills-grid{
   display:flex;
@@ -342,11 +323,7 @@ body{
   margin:26px 0;
 }
 
-.skill-item{
-  background:transparent;
-  border:none;
-  padding:0;
-}
+.skill-item{background:transparent;border:none;padding:0}
 
 .skill-item img{
   width:42px;
@@ -354,15 +331,10 @@ body{
   transition:.2s;
 }
 
-.skill-item:hover img{
-  transform:translateY(-5px);
-}
+.skill-item:hover img{transform:translateY(-5px)}
 
 /* FOOTER */
-.footer-call{
-  text-align:center;
-  margin-top:52px;
-}
+.footer-call{text-align:center;margin-top:52px}
 
 .footer-links{
   display:flex;
@@ -371,59 +343,59 @@ body{
   flex-wrap:wrap;
 }
 
-.footer-stars{
-  opacity:.7;
-}
+.footer-stars{opacity:.7}
+.footer-cta{font-weight:800;margin:8px 0}
 
-.footer-cta{
-  font-weight:800;
-  margin:8px 0;
-}
+a{color:var(--ink);text-decoration:none;transition:.2s}
+a:hover{color:var(--blue)}
 
-a{
-  color:var(--ink);
-  text-decoration:none;
-  transition:.2s;
-}
-
-a:hover{
-  color:var(--blue);
-}
-
+/* RESPONSIVO (mantém layout desktop, sem empilhar; QR some) */
 @media(max-width:900px){
   body{padding:clamp(90px,14vw,150px) 14px 70px}
+
   .paper{
     max-width:920px;
     width:min(920px,100%);
     padding:clamp(150px,24vw,190px) clamp(18px,5vw,44px) clamp(70px,10vw,100px);
   }
+
   .card{
     top:clamp(-120px,-16vw,-92px);
     width:clamp(90%,92vw,94%);
     padding:clamp(22px,4.2vw,30px) clamp(18px,4.2vw,28px);
     overflow:visible;
   }
+
   .card-inner{
     flex-direction:row;
     align-items:center;
-    gap:clamp(14px,3vw,22px);
+    justify-content:flex-start;
+    gap:clamp(12px,3vw,22px);
   }
+
   .card-photo{
     width:clamp(98px,18vw,150px);
     height:clamp(98px,18vw,150px);
     padding:clamp(4px,1.2vw,6px);
     left:clamp(-30px,-5vw,-16px);
   }
+
+  .card-info{min-width:0}
+
   .name{font-size:clamp(18px,4.6vw,30px)}
   .headline{font-size:clamp(12px,2.6vw,15px);max-width:none}
   .card-meta{gap:clamp(10px,2.6vw,18px);font-size:clamp(12px,2.4vw,14px)}
-  .qr-frame{padding:clamp(8px,1.8vw,10px)}
-  .qr-frame img{width:clamp(62px,12vw,92px)}
+
+  /* QR NÃO APARECE NO MOBILE */
+  .card-qr,
+  .qr-frame{display:none !important}
+
   .clip{
     top:clamp(-62px,-9vw,-44px);
     left:clamp(18px,5vw,50px);
     width:clamp(26px,4.5vw,34px);
   }
+
   .para{font-size:clamp(14px,3vw,17px);max-width:none}
   .rule.dotted{margin:clamp(28px,6vw,40px) 0}
   .cols{gap:clamp(30px,7vw,60px)}
@@ -439,5 +411,4 @@ a:hover{
     grid-template-columns:1fr;
     gap:8px;
   }
-  .qr-frame img{width:64px}
 }
