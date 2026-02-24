@@ -22,7 +22,7 @@
         <div class="card-inner">
 
           <div class="card-photo">
-            <img src="./assets/img/profile/p-01.jpg" alt="Foto de perfil de Lorenzo Mitestainer Guirelli">
+            <img id="profilePhoto" src="./assets/img/profile/p-01.jpg" alt="Foto de perfil de Lorenzo Mitestainer Guirelli">
           </div>
 
           <div class="card-info">
@@ -242,5 +242,21 @@
       </div>
     </section>
   </main>
+
+  <script>
+    (function () {
+      const el = document.getElementById("profilePhoto");
+      if (!el) return;
+
+      const photos = [
+        "./assets/img/profile/p-01.jpg",
+        "./assets/img/profile/p-02.jpg",
+        "./assets/img/profile/p-03.jpg",
+        "./assets/img/profile/p-04.jpg"
+      ];
+
+      el.src = photos[Math.floor(Math.random() * photos.length)];
+    })();
+  </script>
 </body>
 </html>
