@@ -281,13 +281,15 @@ a:hover{color:var(--blue)}
 
 @media(max-width:900px){
 
-  body{padding:clamp(90px,14vw,150px) 14px 70px}
+  body{
+    padding:clamp(120px,20vw,180px) 14px 70px;
+  }
 
   :root{
     --padX:clamp(18px,5vw,44px);
-    --padTop:clamp(150px,24vw,190px);
+    --padTop:clamp(190px,30vw,230px);
     --padBottom:clamp(70px,10vw,100px);
-    --cardTop:clamp(-120px,-16vw,-92px);
+    --cardTop:clamp(-95px,-13vw,-80px);
   }
 
   .paper{
@@ -296,8 +298,8 @@ a:hover{color:var(--blue)}
   }
 
   .clip{
-    top:-37px;
-    left:12px;
+    top:-52px;
+    left:16px;
     width:28px;
   }
 
@@ -313,6 +315,7 @@ a:hover{color:var(--blue)}
     gap:clamp(12px,3vw,18px);
   }
 
+  /* foto mantém tamanho constante; só reduz em telas bem pequenas */
   .card-photo{
     width:130px;
     height:130px;
@@ -327,8 +330,10 @@ a:hover{color:var(--blue)}
     object-fit:cover;
   }
 
+  /* QR não aparece no mobile */
   .card-qr,.qr-frame{display:none!important}
 
+  /* textos ajustam dinamicamente p manter visual de cartão */
   .name{
     font-size:clamp(16px,4.4vw,26px);
     margin-bottom:6px;
@@ -340,6 +345,7 @@ a:hover{color:var(--blue)}
     max-width:none;
   }
 
+  /* contatos podem sumir se apertar */
   .card-meta{
     font-size:clamp(11px,2.6vw,13px);
     gap:clamp(8px,2.4vw,14px);
@@ -347,6 +353,7 @@ a:hover{color:var(--blue)}
 
   @media(max-width:720px){
     .card-meta{display:none}
+    .headline{margin-bottom:0}
   }
 
   @media(max-width:420px){
