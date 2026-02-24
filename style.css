@@ -58,12 +58,12 @@ body{
   position:absolute;
   top:-43px;
   left:50px;
-  width:50px;
+  width:34px;
   transform:rotate(-10deg);
   height:auto;
   z-index:80;
   filter:drop-shadow(0 14px 18px rgba(0,0,0,.45));
-  transform:rotate(-20deg);
+  transform:rotate(-10deg);
   pointer-events:none;
 }
 
@@ -95,8 +95,8 @@ body{
   left:-50px;
   z-index:70;
 
-  width:118px;
-  height:118px;
+  width:150px;
+  height:150px;
   background:#fff;
   padding:6px;
   transform:rotate(-2deg);
