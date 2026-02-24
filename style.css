@@ -18,11 +18,7 @@ body{
   color:var(--ink);
 }
 
-.stage{
-  width:100%;
-  display:flex;
-  justify-content:center;
-}
+.stage{width:100%;display:flex;justify-content:center}
 
 .paper{
   position:relative;
@@ -48,10 +44,7 @@ body{
   z-index:0;
 }
 
-.paper>*{
-  position:relative;
-  z-index:2;
-}
+.paper>*{position:relative;z-index:2}
 
 /* CLIP */
 .clip{
@@ -93,7 +86,6 @@ body{
   position:relative;
   left:-50px;
   z-index:70;
-
   width:150px;
   height:150px;
   background:#fff;
@@ -103,25 +95,20 @@ body{
   flex-shrink:0;
 }
 
-.card-photo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
+.card-photo img{width:100%;height:100%;object-fit:cover}
 
-.card-info{
-  flex:1;
-}
+.card-info{flex:1;min-width:0}
 
+/* TEXTOS DO HEADER DINÂMICOS (DESKTOP + MOBILE) */
 .name{
-  font-size:30px;
+  font-size:clamp(18px,3vw,30px);
   font-weight:800;
   margin-bottom:8px;
   line-height:1.05;
 }
 
 .headline{
-  font-size:15px;
+  font-size:clamp(12px,1.6vw,15px);
   margin-bottom:12px;
   opacity:.98;
   max-width:560px;
@@ -131,7 +118,7 @@ body{
   display:flex;
   flex-wrap:wrap;
   gap:18px;
-  font-size:14px;
+  font-size:clamp(12px,1.45vw,14px);
 }
 
 .card-meta a{
@@ -141,10 +128,7 @@ body{
   opacity:.95;
 }
 
-.card-meta a:hover{
-  color:var(--hover);
-  opacity:1;
-}
+.card-meta a:hover{color:var(--hover);opacity:1}
 
 .qr-frame{
   background:#fff;
@@ -152,34 +136,14 @@ body{
   box-shadow:0 10px 22px rgba(0,0,0,.18);
 }
 
-.qr-frame img{
-  width:92px;
-  display:block;
-}
+.qr-frame img{width:92px;display:block}
 
 /* CONTENT */
-.content{
-  margin-top:0;
-}
+.content{margin-top:0}
 
-.title-row{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  margin-bottom:18px;
-}
-
-.circle{
-  width:12px;
-  height:12px;
-  background:var(--blue);
-}
-
-.section-title{
-  font-size:16px;
-  letter-spacing:2px;
-  font-weight:800;
-}
+.title-row{display:flex;align-items:center;gap:10px;margin-bottom:18px}
+.circle{width:12px;height:12px;background:var(--blue)}
+.section-title{font-size:16px;letter-spacing:2px;font-weight:800}
 
 .para{
   font-size:17px;
@@ -196,9 +160,7 @@ body{
 }
 
 /* FORMAÇÃO */
-.entry{
-  padding:18px 0;
-}
+.entry{padding:18px 0}
 
 .entry-head{
   display:flex;
@@ -221,16 +183,12 @@ body{
   color:var(--muted);
 }
 
-.block-formacao{
-  padding-bottom:48px;
-  border-bottom:2px solid rgba(0,0,0,.08);
-  margin-bottom:48px;
-}
-
-/* DIVISÃO INTERNA (FORMAÇÃO -> COMPLEMENTAR) */
+/* DIVISÃO INTERNA (SÓ APARECE SE O INDEX TIVER AS DIVS ABAIXO) */
 .formacao-academica{margin-bottom:50px}
 
 .divider-interno{
+  display:block;
+  width:100%;
   height:1px;
   margin:50px 0;
   background:repeating-linear-gradient(90deg,rgba(20,24,38,.45) 0 6px,transparent 6px 14px);
@@ -262,12 +220,7 @@ body{
 }
 
 .cols li{margin-bottom:6px}
-
-.cols li::before{
-  content:"•";
-  margin-right:10px;
-  color:rgba(20,24,38,.65);
-}
+.cols li::before{content:"•";margin-right:10px;color:rgba(20,24,38,.65)}
 
 /* EXPERIÊNCIA */
 .exp{margin-bottom:56px}
@@ -280,24 +233,9 @@ body{
   margin-bottom:8px;
 }
 
-.exp-org{
-  font-size:19px;
-  font-weight:800;
-  color:var(--ink);
-}
-
-.exp-date{
-  font-size:14px;
-  font-weight:500;
-  color:rgba(20,24,38,.55);
-  white-space:nowrap;
-}
-
-.exp-role{
-  font-size:16px;
-  font-weight:700;
-  margin-bottom:14px;
-}
+.exp-org{font-size:19px;font-weight:800;color:var(--ink)}
+.exp-date{font-size:14px;font-weight:500;color:rgba(20,24,38,.55);white-space:nowrap}
+.exp-role{font-size:16px;font-weight:700;margin-bottom:14px}
 
 .bullets{
   margin-top:10px;
@@ -324,32 +262,19 @@ body{
 }
 
 .skill-item{background:transparent;border:none;padding:0}
-
-.skill-item img{
-  width:42px;
-  filter:drop-shadow(0 6px 10px rgba(0,0,0,.25));
-  transition:.2s;
-}
-
+.skill-item img{width:42px;filter:drop-shadow(0 6px 10px rgba(0,0,0,.25));transition:.2s}
 .skill-item:hover img{transform:translateY(-5px)}
 
 /* FOOTER */
 .footer-call{text-align:center;margin-top:52px}
-
-.footer-links{
-  display:flex;
-  justify-content:center;
-  gap:14px;
-  flex-wrap:wrap;
-}
-
+.footer-links{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
 .footer-stars{opacity:.7}
 .footer-cta{font-weight:800;margin:8px 0}
 
 a{color:var(--ink);text-decoration:none;transition:.2s}
 a:hover{color:var(--blue)}
 
-/* RESPONSIVO (mantém layout desktop, sem empilhar; QR some) */
+/* RESPONSIVO (HEADER SEM EMPILHAR + SEM QR) */
 @media(max-width:900px){
   body{padding:clamp(90px,14vw,150px) 14px 70px}
 
@@ -363,7 +288,6 @@ a:hover{color:var(--blue)}
     top:clamp(-120px,-16vw,-92px);
     width:clamp(90%,92vw,94%);
     padding:clamp(22px,4.2vw,30px) clamp(18px,4.2vw,28px);
-    overflow:visible;
   }
 
   .card-inner{
@@ -380,15 +304,7 @@ a:hover{color:var(--blue)}
     left:clamp(-30px,-5vw,-16px);
   }
 
-  .card-info{min-width:0}
-
-  .name{font-size:clamp(18px,4.6vw,30px)}
-  .headline{font-size:clamp(12px,2.6vw,15px);max-width:none}
-  .card-meta{gap:clamp(10px,2.6vw,18px);font-size:clamp(12px,2.4vw,14px)}
-
-  /* QR NÃO APARECE NO MOBILE */
-  .card-qr,
-  .qr-frame{display:none !important}
+  .card-qr,.qr-frame{display:none!important}
 
   .clip{
     top:clamp(-62px,-9vw,-44px);
@@ -406,9 +322,5 @@ a:hover{color:var(--blue)}
 
 @media(max-width:560px){
   .card{width:94%}
-  .card-meta{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:8px;
-  }
+  .card-meta{display:grid;grid-template-columns:1fr;gap:8px}
 }
