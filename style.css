@@ -279,8 +279,8 @@ body{
 a{color:var(--ink);text-decoration:none;transition:.2s}
 a:hover{color:var(--blue)}
 
-/* RESPONSIVO */
 @media(max-width:900px){
+
   body{padding:clamp(90px,14vw,150px) 14px 70px}
 
   :root{
@@ -293,6 +293,13 @@ a:hover{color:var(--blue)}
   .paper{
     max-width:920px;
     width:min(920px,100%);
+  }
+
+  /* AJUSTE DO CLIP NO MOBILE */
+  .clip{
+    top:-55px;      /* sobe ou desce */
+    left:20px;      /* move para direita/esquerda */
+    width:28px;     /* ajusta tamanho */
   }
 
   .card{
@@ -322,9 +329,4 @@ a:hover{color:var(--blue)}
   .skills-grid{gap:clamp(16px,4vw,26px)}
   .skill-item img{width:clamp(34px,7vw,42px)}
   .footer-call{margin-top:clamp(34px,7vw,52px)}
-}
-
-@media(max-width:560px){
-  .card{width:94%}
-  .card-meta{display:grid;grid-template-columns:1fr;gap:8px}
 }
