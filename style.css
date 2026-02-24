@@ -56,7 +56,7 @@ body{
 /* CLIP */
 .clip{
   position:absolute;
-  top:-43px;
+  top:-42px;
   left:50px;
   width:34px;
   transform:rotate(-10deg);
