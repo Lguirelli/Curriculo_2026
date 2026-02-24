@@ -95,7 +95,7 @@ body{
   width:150px;
   height:150px;
   background:#fff;
-  padding:6px;
+  padding:0px;
   transform:rotate(-2deg);
   box-shadow:0 16px 30px rgba(0,0,0,.25);
   flex-shrink:0;
@@ -319,8 +319,8 @@ a:hover{color:var(--blue)}
   .card-photo{
     width:130px;
     height:130px;
-    padding:6px;
-    left:-26px;
+    padding:0px;
+    left:-5px;
     flex-shrink:0;
   }
 
