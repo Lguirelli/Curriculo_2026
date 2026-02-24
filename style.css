@@ -76,7 +76,7 @@ body{
 .card-photo{
   position: relative;   /* permite mover */
   top: 0;               /* aumenta para descer */
-  left: -15;              /* aumenta para direita */
+  left: -150;              /* aumenta para direita */
 
   width:118px;
   height:118px;
