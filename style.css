@@ -297,8 +297,8 @@ a:hover{color:var(--blue)}
 
   /* AJUSTE DO CLIP NO MOBILE */
   .clip{
-    top:-70px;      /* sobe ou desce */
-    left:5px;      /* move para direita/esquerda */
+    top:-30px;      /* sobe ou desce */
+    left:10px;      /* move para direita/esquerda */
     width:28px;     /* ajusta tamanho */
   }
 
