@@ -7,6 +7,12 @@
   --muted:#4a5167;
   --blue:#365cff;
   --hover:#9bb4ff;
+
+  --padX:90px;
+  --padTop:170px;
+  --padBottom:120px;
+
+  --cardTop:-118px;
 }
 
 body{
@@ -25,7 +31,7 @@ body{
   width:100%;
   max-width:920px;
   background:var(--paper);
-  padding:170px 90px 120px;
+  padding:var(--padTop) var(--padX) var(--padBottom);
   box-shadow:0 30px 90px rgba(0,0,0,.65);
   overflow:visible;
 }
@@ -49,9 +55,9 @@ body{
 /* CLIP */
 .clip{
   position:absolute;
-  top:-45px;
-  left:50px;
-  width:34px;
+  top:calc(var(--cardTop) + 73px);
+  left:clamp(-12px, calc(var(--padX) - 40px), 50px);
+  width:clamp(26px,3.6vw,34px);
   height:auto;
   z-index:80;
   filter:drop-shadow(0 14px 18px rgba(0,0,0,.45));
@@ -62,7 +68,7 @@ body{
 /* HEADER */
 .card{
   position:absolute;
-  top:-118px;
+  top:var(--cardTop);
   left:50%;
   transform:translateX(-50%) rotate(2deg);
   width:88%;
@@ -99,7 +105,7 @@ body{
 
 .card-info{flex:1;min-width:0}
 
-/* TEXTOS DO HEADER DINÂMICOS (DESKTOP + MOBILE) */
+/* TEXTOS DO HEADER DINÂMICOS */
 .name{
   font-size:clamp(18px,3vw,30px);
   font-weight:800;
@@ -183,7 +189,6 @@ body{
   color:var(--muted);
 }
 
-/* DIVISÃO INTERNA (SÓ APARECE SE O INDEX TIVER AS DIVS ABAIXO) */
 .formacao-academica{margin-bottom:50px}
 
 .divider-interno{
@@ -274,18 +279,23 @@ body{
 a{color:var(--ink);text-decoration:none;transition:.2s}
 a:hover{color:var(--blue)}
 
-/* RESPONSIVO (HEADER SEM EMPILHAR + SEM QR) */
+/* RESPONSIVO */
 @media(max-width:900px){
   body{padding:clamp(90px,14vw,150px) 14px 70px}
+
+  :root{
+    --padX:clamp(18px,5vw,44px);
+    --padTop:clamp(150px,24vw,190px);
+    --padBottom:clamp(70px,10vw,100px);
+    --cardTop:clamp(-120px,-16vw,-92px);
+  }
 
   .paper{
     max-width:920px;
     width:min(920px,100%);
-    padding:clamp(150px,24vw,190px) clamp(18px,5vw,44px) clamp(70px,10vw,100px);
   }
 
   .card{
-    top:clamp(-120px,-16vw,-92px);
     width:clamp(90%,92vw,94%);
     padding:clamp(22px,4.2vw,30px) clamp(18px,4.2vw,28px);
   }
@@ -305,12 +315,6 @@ a:hover{color:var(--blue)}
   }
 
   .card-qr,.qr-frame{display:none!important}
-
-  .clip{
-    top:clamp(-62px,-9vw,-44px);
-    left:clamp(18px,5vw,50px);
-    width:clamp(26px,4.5vw,34px);
-  }
 
   .para{font-size:clamp(14px,3vw,17px);max-width:none}
   .rule.dotted{margin:clamp(28px,6vw,40px) 0}
