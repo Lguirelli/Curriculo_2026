@@ -298,7 +298,7 @@ a:hover{color:var(--blue)}
   }
 
   .card .clip{
-    top:clamp(32px,2.4vw,16px);
+    top:clamp(30px,2.4vw,16px);
     left:clamp(-17px,-7vw,-18px);
     width:clamp(26px,4.2vw,32px);
   }
@@ -314,7 +314,7 @@ a:hover{color:var(--blue)}
     width:130px;
     height:130px;
     padding:0px;
-    left:-5px;
+    left:-15px;
     flex-shrink:0;
   }
 
