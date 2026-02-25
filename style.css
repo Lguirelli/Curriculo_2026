@@ -74,7 +74,7 @@ body{
   height:auto;
   z-index:95;
   filter:drop-shadow(0 14px 18px rgba(0,0,0,.45));
-  transform:rotate(-10deg);
+  transform:rotate(-15deg);
   pointer-events:none;
 }
 
