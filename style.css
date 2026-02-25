@@ -7,9 +7,11 @@
   --muted:#4a5167;
   --blue:#365cff;
   --hover:#9bb4ff;
+
   --padX:90px;
   --padTop:170px;
   --padBottom:120px;
+
   --cardTop:-118px;
 }
 
@@ -81,7 +83,6 @@ body{
   transform:rotate(-2deg);
   box-shadow:0 16px 30px rgba(0,0,0,.25);
   flex-shrink:0;
-  overflow:visible;
 }
 
 .card-photo img{
@@ -93,7 +94,7 @@ body{
 
 .card-photo .clip{
   position:absolute;
-  top:-30px;
+  top:-18px;
   left:-18px;
   width:34px;
   height:auto;
@@ -144,7 +145,10 @@ body{
 .qr-frame img{width:92px;display:block}
 
 @media(max-width:900px){
-  body{padding:clamp(120px,20vw,180px) 14px 70px}
+
+  body{
+    padding:clamp(120px,20vw,180px) 14px 70px;
+  }
 
   :root{
     --padX:clamp(18px,5vw,44px);
