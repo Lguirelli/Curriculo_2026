@@ -282,7 +282,7 @@ a:hover{color:var(--blue)}
 
   :root{
     --padX:clamp(18px,5vw,44px);
-    --padTop:clamp(190px,30vw,230px);
+    --padTop:clamp(100px,30vw,230px);
     --padBottom:clamp(70px,10vw,100px);
     --cardTop:clamp(-95px,-13vw,-80px);
   }
@@ -299,7 +299,7 @@ a:hover{color:var(--blue)}
 
   .card .clip{
     top:clamp(33px,2.4vw,16px);
-    left:clamp(-20px,-7vw,-18px);
+    left:clamp(-17px,-7vw,-18px);
     width:clamp(26px,4.2vw,32px);
   }
 
