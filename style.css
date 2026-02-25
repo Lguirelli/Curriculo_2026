@@ -142,23 +142,61 @@ body{
 
 .content{margin-top:0}
 
-.title-row{display:flex;align-items:center;gap:10px;margin-bottom:18px}
-
-.circle{
-  width:20px;
-  height:20px;
-  flex:0 0 auto;
-  background-repeat:no-repeat;
-  background-position:center;
-  background-size:contain;
+.title-row{
+  display:inline-flex;
+  align-items:center;
+  position:relative;
+  margin-bottom:18px;
 }
 
-#resumo .circle{background-image:url("./assets/svg/circles/circulo.svg")}
-#formacao .circle{background-image:url("./assets/svg/circles/circulo1.svg")}
-#experiencia .circle{background-image:url("./assets/svg/circles/circulo2.svg")}
-#habilidades .circle{background-image:url("./assets/svg/circles/circulo3.svg")}
+.section-title{
+  font-size:16px;
+  letter-spacing:2px;
+  font-weight:800;
+  position:relative;
+  z-index:2;
+  line-height:1.25;
+  padding:6px 18px 6px 20px;
+}
 
-.section-title{font-size:16px;letter-spacing:2px;font-weight:800}
+.circle{
+  position:absolute;
+  inset:auto;
+  left:-10px;
+  top:50%;
+  transform:translateY(-50%);
+  width:calc(100% + 20px);
+  height:clamp(28px,3.6vw,40px);
+  background:var(--blue);
+  z-index:1;
+  pointer-events:none;
+  -webkit-mask-position:center;
+  -webkit-mask-repeat:no-repeat;
+  -webkit-mask-size:100% 100%;
+  mask-position:center;
+  mask-repeat:no-repeat;
+  mask-size:100% 100%;
+}
+
+#resumo .circle{
+  -webkit-mask-image:url("./assets/svg/circles/circulo.svg");
+  mask-image:url("./assets/svg/circles/circulo.svg");
+}
+
+#formacao .circle{
+  -webkit-mask-image:url("./assets/svg/circles/circulo1.svg");
+  mask-image:url("./assets/svg/circles/circulo1.svg");
+}
+
+#experiencia .circle{
+  -webkit-mask-image:url("./assets/svg/circles/circulo2.svg");
+  mask-image:url("./assets/svg/circles/circulo2.svg");
+}
+
+#habilidades .circle{
+  -webkit-mask-image:url("./assets/svg/circles/circulo3.svg");
+  mask-image:url("./assets/svg/circles/circulo3.svg");
+}
 
 .para{
   font-size:17px;
@@ -268,7 +306,7 @@ body{
 .bullets li{margin-bottom:10px}
 
 #habilidades{text-align:center}
-#habilidades .title-row{justify-content:center}
+#habilidades .title-row{margin-left:auto;margin-right:auto}
 #habilidades .para{max-width:780px;margin:0 auto}
 
 .skills-grid{
@@ -357,6 +395,17 @@ a:hover{color:var(--blue)}
     column-gap:clamp(18px,5vw,32px);
     row-gap:clamp(14px,4vw,18px);
     margin-top:18px;
+  }
+
+  .circle{
+    height:clamp(26px,5.4vw,38px);
+    left:-8px;
+    width:calc(100% + 16px);
+  }
+
+  .section-title{
+    padding:6px 16px 6px 18px;
+    font-size:clamp(14px,2.6vw,16px);
   }
 }
 
