@@ -1,260 +1,188 @@
-<!doctype html>
-<html lang="pt-BR">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Currículo — Lorenzo Mitestainer Guirelli</title>
+*{margin:0;padding:0;box-sizing:border-box}
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+:root{
+  --bg:#0b0f18;
+  --paper:#f3f3f3;
+  --ink:#141826;
+  --muted:#4a5167;
+  --blue:#365cff;
+  --hover:#9bb4ff;
 
-  <link rel="stylesheet" href="./style.css" />
-</head>
+  --padX:90px;
+  --padTop:170px;
+  --padBottom:120px;
 
-<body>
-  <main class="stage">
-    <section class="paper" aria-label="Currículo">
+  --cardTop:-118px;
+}
 
-      <header class="card" id="topo">
-        <div class="card-inner">
+body{
+  background:radial-gradient(1200px 700px at 18% 0%,rgba(54,92,255,.18),transparent 60%),var(--bg);
+  font-family:"IBM Plex Mono",monospace;
+  display:flex;
+  justify-content:center;
+  padding:150px 20px 120px;
+  color:var(--ink);
+}
 
-          <div class="card-photo">
-            <img class="clip" src="./assets/svg/clips.svg" alt="" aria-hidden="true" />
-            <img id="profilePhoto" src="./assets/img/profile/p-01.jpg" alt="Foto de perfil de Lorenzo Mitestainer Guirelli">
-          </div>
+.stage{width:100%;display:flex;justify-content:center}
 
-          <div class="card-info">
-            <h1 class="name">Lorenzo Mitestainer Guirelli</h1>
-            <p class="headline">Marketing Digital · Produção de Conteúdo · Automação e Inteligência Artificial</p>
+.paper{
+  position:relative;
+  width:100%;
+  max-width:920px;
+  background:var(--paper);
+  padding:var(--padTop) var(--padX) var(--padBottom);
+  box-shadow:0 30px 90px rgba(0,0,0,.65);
+  overflow:visible;
+}
 
-            <div class="card-meta">
-              <a href="https://wa.me/5519997791295" target="_blank" rel="noreferrer">(19) 99779-1295</a>
-              <a href="mailto:guirellilorenzo1@gmail.com">guirellilorenzo1@gmail.com</a>
-              <a href="https://www.linkedin.com/in/lorenzo-mitestainer-guirelli-9b455916b/" target="_blank" rel="noreferrer">LinkedIn</a>
-            </div>
-          </div>
+.paper::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(1100px 520px at 20% 10%,rgba(0,0,0,.07),transparent 60%),
+    radial-gradient(900px 520px at 85% 55%,rgba(0,0,0,.05),transparent 62%),
+    repeating-linear-gradient(0deg,rgba(0,0,0,.012) 0 2px,transparent 2px 6px);
+  mix-blend-mode:multiply;
+  opacity:.85;
+  z-index:0;
+}
 
-          <div class="card-qr">
-            <div class="qr-frame">
-              <img src="./assets/img/qr.png" alt="QR Code do LinkedIn">
-            </div>
-          </div>
+.paper>*{position:relative;z-index:2}
 
-        </div>
-      </header>
+.card{
+  position:absolute;
+  top:var(--cardTop);
+  left:50%;
+  transform:translateX(-50%) rotate(2deg);
+  width:88%;
+  background:var(--blue);
+  color:#fff;
+  padding:34px 46px;
+  box-shadow:0 24px 55px rgba(0,0,0,.45);
+  z-index:60;
+  overflow:visible;
+}
 
-      <div class="content">
+.card-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:28px;
+}
 
-        <section class="block" id="resumo">
-          <div class="title-row">
-            <span class="circle" aria-hidden="true"></span>
-            <h2 class="section-title">RESUMO PROFISSIONAL</h2>
-          </div>
+.card-photo{
+  position:relative;
+  left:-50px;
+  z-index:70;
+  width:150px;
+  height:150px;
+  background:#fff;
+  transform:rotate(-2deg);
+  box-shadow:0 16px 30px rgba(0,0,0,.25);
+  flex-shrink:0;
+}
 
-          <p class="para">
-            Profissional com formação em Produção Multimídia e Bacharelado Interdisciplinar em Ciência e Economia, com atuação em marketing digital, produção de conteúdo e planejamento estratégico para redes sociais. Experiência na criação de conteúdo visual, edição de vídeos, design gráfico e organização de calendários editoriais.
-          </p>
-          <p class="para">
-            Forte interesse e estudo independente em programação, automação de processos e inteligência artificial, com aplicação prática em marketing digital, atendimento e otimização de fluxos operacionais. Desenvolve projetos próprios envolvendo automações, integração de ferramentas, uso de APIs, lógica de programação e agentes de IA, com foco em eficiência, escala e redução de tarefas manuais.
-          </p>
-          <p class="para">
-            Perfil analítico, organizado e orientado a resultados, com foco em inovação, eficiência operacional, melhoria contínua e aprendizado constante, integrando criatividade, tecnologia e estratégia para gerar resultados mensuráveis em ambientes digitais.
-          </p>
-        </section>
+.card-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
 
-        <div class="rule dotted"></div>
+.card-photo .clip{
+  position:absolute;
+  top:-30px;
+  left:-18px;
+  width:34px;
+  height:auto;
+  transform:rotate(-10deg);
+  z-index:90;
+  pointer-events:none;
+  filter:drop-shadow(0 12px 16px rgba(0,0,0,.4));
+}
 
-        <section class="block block-formacao" id="formacao">
-          <div class="title-row">
-            <span class="circle" aria-hidden="true"></span>
-            <h2 class="section-title">FORMAÇÃO</h2>
-          </div>
+.card-info{flex:1;min-width:0}
 
-          <div class="formacao-academica">
-            <div class="entry">
-              <div class="entry-head">
-                <div class="entry-title">Produção Multimídia</div>
-                <div class="entry-date">2020 — 2023</div>
-              </div>
-              <div class="entry-sub">Centro Universitário do Sul de Minas (Grupo UNIS)</div>
-            </div>
+.name{
+  font-size:clamp(18px,3vw,30px);
+  font-weight:800;
+  margin-bottom:8px;
+  line-height:1.05;
+}
 
-            <div class="entry">
-              <div class="entry-head">
-                <div class="entry-title">Bacharelado Interdisciplinar em Ciência e Economia</div>
-                <div class="entry-date">2017 — 2022</div>
-              </div>
-              <div class="entry-sub">Universidade Federal de Alfenas (UNIFAL)</div>
-            </div>
-          </div>
+.headline{
+  font-size:clamp(12px,1.6vw,15px);
+  margin-bottom:12px;
+  opacity:.98;
+  max-width:560px;
+}
 
-          <div class="divider-interno"></div>
+.card-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+  font-size:clamp(12px,1.45vw,14px);
+}
 
-          <div class="formacao-complementar">
-            <div class="cols">
-              <div class="col-box">
-                <h3>Cursos</h3>
-                <ul>
-                  <li>Marketing Digital · EBAC</li>
-                  <li>Trade Marketing Digital · ESPM</li>
-                  <li>Método SPE · Luana Carolina</li>
-                </ul>
-              </div>
+.card-meta a{
+  color:#fff;
+  text-decoration:none;
+  transition:.2s;
+  opacity:.95;
+}
 
-              <div class="col-box">
-                <h3>Idiomas</h3>
-                <ul>
-                  <li>Português · Nativo</li>
-                  <li>Inglês · Avançado</li>
-                </ul>
-              </div>
+.card-meta a:hover{color:var(--hover);opacity:1}
 
-              <div class="col-box">
-                <h3>Ferramentas</h3>
-                <ul>
-                  <li>Photoshop · Avançado</li>
-                  <li>Illustrator · Intermediário</li>
-                  <li>Premiere Pro · Avançado</li>
-                  <li>After Effects · Intermediário</li>
-                  <li>Blender · Intermediário</li>              
-                  <li>Pacote Office · Intermediário</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
+.qr-frame{
+  background:#fff;
+  padding:10px;
+  box-shadow:0 10px 22px rgba(0,0,0,.18);
+}
 
-        <div class="rule dotted"></div>
+.qr-frame img{width:92px;display:block}
 
-        <section class="block" id="experiencia">
-          <div class="title-row">
-            <span class="circle" aria-hidden="true"></span>
-            <h2 class="section-title">EXPERIÊNCIA</h2>
-          </div>
+@media(max-width:900px){
 
-          <div class="exp">
-            <div class="exp-head">
-              <div class="exp-org">Grupofarma</div>
-              <div class="exp-date">Nov/2022 — Atual</div>
-            </div>
-            <div class="exp-role">Assistente de Marketing</div>
-            <ul class="bullets">
-              <li>Planejamento e desenvolvimento de calendário mensal de conteúdo para associados.</li>
-              <li>Criação de artes gráficas e materiais institucionais.</li>
-              <li>Edição de vídeos e imagens para comunicação interna e externa.</li>
-              <li>Apoio estratégico em campanhas de marketing digital e redes sociais.</li>
-            </ul>
-          </div>
+  body{
+    padding:clamp(120px,20vw,180px) 14px 70px;
+  }
 
-          <div class="exp">
-            <div class="exp-head">
-              <div class="exp-org">Raça Marketing e Comunicação</div>
-              <div class="exp-date">Mai/2022 — Jun/2022</div>
-            </div>
-            <div class="exp-role">Freelancer · Marketing Digital</div>
-            <ul class="bullets">
-              <li>Gestão de tráfego pago e contas de anúncios.</li>
-              <li>Suporte na criação de campanhas digitais.</li>
-              <li>Edição de vídeos e conteúdos para mídias digitais.</li>
-            </ul>
-          </div>
+  :root{
+    --padX:clamp(18px,5vw,44px);
+    --padTop:clamp(190px,30vw,230px);
+    --padBottom:clamp(70px,10vw,100px);
+    --cardTop:clamp(-95px,-13vw,-80px);
+  }
 
-          <div class="exp">
-            <div class="exp-head">
-              <div class="exp-org">Aplicari</div>
-              <div class="exp-date">2021 — 2022</div>
-            </div>
-            <div class="exp-role">Marketing Digital e Produção de Conteúdo</div>
-            <ul class="bullets">
-              <li>Gerenciamento de postagens e impulsionamentos.</li>
-              <li>Produção e edição de vídeos e imagens para redes sociais.</li>
-              <li>Desenvolvimento de estratégias de conteúdo e presença digital.</li>
-            </ul>
-          </div>
+  .card{
+    width:clamp(88%,92vw,94%);
+    padding:clamp(18px,3.6vw,26px) clamp(16px,3.6vw,24px);
+  }
 
-          <div class="exp">
-            <div class="exp-head">
-              <div class="exp-org">Liga de Mercado Financeiro (UNIFAL)</div>
-              <div class="exp-date">2019 — 2020</div>
-            </div>
-            <div class="exp-role">Diretor de Marketing</div>
-            <ul class="bullets">
-              <li>Desenvolvimento da identidade visual da liga.</li>
-              <li>Planejamento estratégico de marketing para eventos e projetos.</li>
-              <li>Gestão da comunicação digital e redes sociais.</li>
-            </ul>
-          </div>
+  .card-photo{
+    width:130px;
+    height:130px;
+    left:-5px;
+  }
 
-          <div class="exp">
-            <div class="exp-head">
-              <div class="exp-org">Associação Atlética Acadêmica Muquirana</div>
-              <div class="exp-date">2018 — 2022</div>
-            </div>
-            <div class="exp-role">Equipe de Marketing</div>
-            <ul class="bullets">
-              <li>Criação de artes para redes sociais e materiais institucionais.</li>
-              <li>Divulgação de eventos e ações acadêmicas.</li>
-            </ul>
-          </div>
-        </section>
+  .card-photo .clip{
+    top:-16px;
+    left:-16px;
+    width:clamp(26px,4vw,32px);
+  }
 
-        <div class="rule dotted"></div>
+  .card-qr,.qr-frame{display:none!important}
 
-        <section class="block" id="habilidades">
-          <div class="title-row">
-            <span class="circle" aria-hidden="true"></span>
-            <h2 class="section-title">HABILIDADES</h2>
-          </div>
+  .name{font-size:clamp(16px,4.4vw,26px)}
+  .headline{font-size:clamp(11px,2.8vw,14px)}
+}
 
-          <div class="skills-grid">
-            <div class="skill-item"><img src="./assets/svg/skills/photoshop.svg" alt="Photoshop"></div>
-            <div class="skill-item"><img src="./assets/svg/skills/illustrator.svg" alt="Illustrator"></div>
-            <div class="skill-item"><img src="./assets/svg/skills/premiere.svg" alt="Premiere Pro"></div>
-            <div class="skill-item"><img src="./assets/svg/skills/after-effects.svg" alt="After Effects"></div>
-            <div class="skill-item"><img src="./assets/svg/skills/blender.svg" alt="Blender"></div>
-            <div class="skill-item"><img src="./assets/svg/skills/media-encoder.svg" alt="Media Encoder"></div>
-            <div class="skill-item"><img src="./assets/svg/skills/audition.svg" alt="Audition"></div>
-            <div class="skill-item"><img src="./assets/svg/skills/chatgpt.svg" alt="ChatGPT"></div>
-          </div>
-
-          <p class="para">
-            Marketing Digital, Produção de Conteúdo, Gestão de Redes Sociais, Planejamento Estratégico, Automação de Processos, Inteligência Artificial aplicada ao Marketing, Lógica de programação (iniciante), Integração de Ferramentas e APIs, Análise de Dados, Otimização de Processos.
-          </p>
-        </section>
-
-        <div class="rule dotted"></div>
-
-        <footer class="footer-call" id="contato">
-          <div class="footer-stars">**************************************</div>
-          <div class="footer-cta">MEUS CONTATOS</div>
-          <div class="footer-links">
-            <a href="mailto:guirellilorenzo1@gmail.com">guirellilorenzo1@gmail.com</a>
-            <span>·</span>
-            <a href="https://wa.me/5519997791295" target="_blank" rel="noreferrer">(19) 99779-1295</a>
-            <span>·</span>
-            <a href="https://www.linkedin.com/in/lorenzo-mitestainer-guirelli-9b455916b/" target="_blank" rel="noreferrer">LinkedIn</a>
-          </div>
-          <div class="footer-stars">**************************************</div>
-        </footer>
-
-      </div>
-    </section>
-  </main>
-
-  <script>
-    (function () {
-      const el = document.getElementById("profilePhoto");
-      if (!el) return;
-
-      const photos = [
-        "./assets/img/profile/p-01.jpg",
-        "./assets/img/profile/p-02.jpg",
-        "./assets/img/profile/p-03.jpg",
-      ];
-
-      el.src = photos[Math.floor(Math.random() * photos.length)];
-    })();
-  </script>
-</body>
-</html>
+@media(max-width:420px){
+  .card-photo{
+    width:105px;
+    height:105px;
+  }
+}
