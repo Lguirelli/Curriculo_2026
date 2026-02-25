@@ -143,7 +143,34 @@ body{
 .content{margin-top:0}
 
 .title-row{display:flex;align-items:center;gap:10px;margin-bottom:18px}
-.circle{width:12px;height:12px;background:var(--blue)}
+
+.circle{
+  width:18px;
+  height:18px;
+  background:var(--blue);
+  flex:0 0 auto;
+}
+
+#resumo .circle{
+  -webkit-mask:url("./assets/svg/circles/circulo.svg") center/contain no-repeat;
+  mask:url("./assets/svg/circles/circulo.svg") center/contain no-repeat;
+}
+
+#formacao .circle{
+  -webkit-mask:url("./assets/svg/circles/circulo1.svg") center/contain no-repeat;
+  mask:url("./assets/svg/circles/circulo1.svg") center/contain no-repeat;
+}
+
+#experiencia .circle{
+  -webkit-mask:url("./assets/svg/circles/circulo2.svg") center/contain no-repeat;
+  mask:url("./assets/svg/circles/circulo2.svg") center/contain no-repeat;
+}
+
+#habilidades .circle{
+  -webkit-mask:url("./assets/svg/circles/circulo.svg") center/contain no-repeat;
+  mask:url("./assets/svg/circles/circulo.svg") center/contain no-repeat;
+}
+
 .section-title{font-size:16px;letter-spacing:2px;font-weight:800}
 
 .para{
