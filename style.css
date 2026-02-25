@@ -145,31 +145,18 @@ body{
 .title-row{display:flex;align-items:center;gap:10px;margin-bottom:18px}
 
 .circle{
-  width:18px;
-  height:18px;
-  background:var(--blue);
+  width:20px;
+  height:20px;
   flex:0 0 auto;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:contain;
 }
 
-#resumo .circle{
-  -webkit-mask:url("./assets/svg/circles/circulo.svg") center/contain no-repeat;
-  mask:url("./assets/svg/circles/circulo.svg") center/contain no-repeat;
-}
-
-#formacao .circle{
-  -webkit-mask:url("./assets/svg/circles/circulo1.svg") center/contain no-repeat;
-  mask:url("./assets/svg/circles/circulo1.svg") center/contain no-repeat;
-}
-
-#experiencia .circle{
-  -webkit-mask:url("./assets/svg/circles/circulo2.svg") center/contain no-repeat;
-  mask:url("./assets/svg/circles/circulo2.svg") center/contain no-repeat;
-}
-
-#habilidades .circle{
-  -webkit-mask:url("./assets/svg/circles/circulo.svg") center/contain no-repeat;
-  mask:url("./assets/svg/circles/circulo.svg") center/contain no-repeat;
-}
+#resumo .circle{background-image:url("./assets/svg/circles/circulo.svg")}
+#formacao .circle{background-image:url("./assets/svg/circles/circulo1.svg")}
+#experiencia .circle{background-image:url("./assets/svg/circles/circulo2.svg")}
+#habilidades .circle{background-image:url("./assets/svg/circles/circulo3.svg")}
 
 .section-title{font-size:16px;letter-spacing:2px;font-weight:800}
 
