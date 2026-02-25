@@ -68,8 +68,8 @@ body{
 
 .card .clip{
   position:absolute;
-  top:30px;
-  left:15px;
+  top:33px;
+  left:7px;
   width:34px;
   height:auto;
   z-index:95;
